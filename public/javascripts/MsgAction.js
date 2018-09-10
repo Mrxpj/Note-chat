@@ -138,27 +138,48 @@ function showSetMsgToOne(name,id){
 }
 
 function addMsgFromUser(msgObj,isSelf){
-	var msgType = isSelf ? "message-reply" : "message-recevie";
+	var msgType = isSelf ? "message-reply" : "message-receive";
 	var msgHtml = $('<div><div class="message-info"><div class="user-info"><img src="/images/1.jpg" class="user-avatar img-thumbnail"></div><div class="message-content-box"><div class="arrow"></div><div class="message-content">test</div></div></div></div>');
 	msgHtml.addClass(msgType);
 	msgHtml.children('.message-info').children('.user-info').children('.user-avatar').attr('src',msgObj.from.img);
 	msgHtml.children('.message-info').children('.user-info').children('.user-avatar').attr('title',msgObj.from.name);
 	msgHtml.children('.message-info').children('.message-content-box').children('.message-content').text(msgObj.msg);
 	$('.msg-content').append(msgHtml);
-	$('.msg-cntent').scrollTop($(".msg-content")[0].scrollHeight);
+	//让滚动条最底下
+	$(".msg-content").scrollTop($(".msg-content")[0].scrollHeight);
 }
 
 function addImgFromUser(msgObj,isSelf){
-	var msgType = isSelf ? "message-reply" : "message-recevie";
+	var msgType = isSelf ? "message-reply" : "message-receive";
 	var msgHtml = $('<div><div class="message-info"><div class="user-info"><img src="/images/1.jpg" class="user-avatar img-thumbnail"></div><div class="message-content-box"><div class="arrow"></div><div class="message-content">test</div></div></div></div>');
 	msgHtml.addClass(msgType);
 	msgHtml.children('.message-info').children('.user-info').children('.user-avatar').attr('src',msgObj.from.img);
 	msgHtml.children('.message-info').children('.user-info').children('.user-avatar').attr('title',msgObj.from.name);
 	msgHtml.children('.message-info').children('.message-content-box').children('.message-content').html("<img src='" + msgObj.img + "'>");
 	$('.msg-content').append(msgHtml);
-	$('.msg-cntent').scrollTop($(".msg-content")[0].scrollHeight);
+	$(".msg-content").scrollTop($(".msg-content")[0].scrollHeight);
 }
 
+function keywordsMsg(e){
+	var event1 = e || window.event;
+	if(event1.keyCode == 13){
+		$('#sendMsg').click();
+	}
+}
+
+function keywordsName(e){
+	var event1 = e || window.event;
+	if(event1.keyCode == 13){
+		$('#btn-setName').click();
+	}
+}
+
+function keywordsName1(e){
+	var event1 = e || window.event;
+	if(event1.keyCode == 13){
+		$('#btn_toOne').click();
+	}
+}
 
 
 
