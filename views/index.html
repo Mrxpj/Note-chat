@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="../public/stylesheets/sco.message.css">
+    <link rel="stylesheet" href="../public/stylesheets/message.css">
+    <link rel="stylesheet" href="../public/css/messenger.css">
+    <link rel="stylesheet" href="../public/css/messenger-theme-ice.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/main.css">
+  </head>
+  <body>
+  	<div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-primary" style="margin-right:-10px;">
+            <div class="panel-heading"><span class="glyphicon glyphicon-user">&nbsp;</span><span>在线成员</span></div>
+            <div class="panel-body">
+              <div class="msg-list-body user-content">
+                <ul>
+                  <li style="display:none;"><a href="#"><img class="img-thumbnail" src="/images/1.jpg"><span></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <div class="btn-group">
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-home"></span></button>
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-user"></span></button>
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-film"></span></button>
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-music"></span></button>
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-heart"></span></button>
+                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="panel panel-primary">
+            <div class="panel-heading"><span class="glyphicon glyphicon-comment">&nbsp;</span><span>聊天室</span><span id="spanuser" style="float:right;"></span></div>
+            <div class="panel-body">
+              <div id="show"></div> 
+              <div class="msg-list-body msg-content"></div>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group">
+                <div class="input-group-addon"><a href="#"><img src="/images/bq.png"></a></div>
+                <div class="input-group-addon" style="padding-bottom:0px;">
+                  <label style="position:relative;"><img src="/images/jt.jpg" title="send images" style="cursor:pointer;">
+                    <input id="sendImage" type="file" value="images" style="display:none;">
+                  </label>
+                </div>
+                <input class="form-control" name="msg" id="msg" type="text" placeholder="请输入聊天内容" onkeydown="javascript:keywordsMsg(event);"><span class="input-group-btn">
+                  <button class="btn btn-primary" id="sendMsg" type="button">发送/Send</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">请设置聊天昵称</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">昵称</div>
+                <input class="form-control" id="username" type="text" value="" onkeydown="javascript:keywordsName(event);">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <input class="btn btn-primary" id="btn-setName" type="button" value="应用昵称">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="setMsgToOne" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel1"></h4>
+          </div>
+          <div class="modal-body">
+            <input class="form-control" id="input_msgToOne" type="text" onkeydown="javascript:keywordsName1(event);">
+          </div>
+          <div class="modal-footer">
+            <input class="btn btn-primary" id="btn_toOne" type="button" value="发送/Send">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../public/javascripts/MsgAction.js"></script>
+    <script src="../public/javascripts/client.js"></script>
+    <script src="../public/javascripts/sco.message.js"></script>
+    <script src="../public/js/messenger.min.js"></script>
+    <script src="../public/js/messenger-theme-flat.js"></script>
+    -->
+  </body>
+</html>
