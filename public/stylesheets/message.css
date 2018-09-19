@@ -37,10 +37,15 @@
     padding: 15px;
     word-break: break-word;
 }
-.message-content-box img {
+/* 自己修改发出去的图片大小 */
+.message-content .img_icon{
     width: 200px;
     height: 200px;
 }
+/* .message-content .emoji_icon{
+    width: 30px;
+    height: 30px;
+} */
 
 .message-reply .message-content-box {
     background: #b8db29;

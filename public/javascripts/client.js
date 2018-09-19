@@ -37,9 +37,6 @@ socket.on('sendImageToAll',function(msgObj){
 	addImgFromUser(msgObj,false);
 })
 
-socket.on('sendEmToAll',function(msgObj){
-	addEmFromUser(msgObj,false)
-})
 
 
 // socket.on('online', function(msg){

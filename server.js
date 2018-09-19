@@ -29,9 +29,7 @@ io.on('connection', function(socket){
     socket.broadcast.emit('sendImageToAll',msgObj)
 });
 //send to emoticon
-socket.on('sendEmToAll',function(msgObj){
-  socket.broadcast.emit('sendEmToAll',msgObj)
-});
+
 });
 
 
