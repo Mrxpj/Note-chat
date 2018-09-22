@@ -1,0 +1,77 @@
+		.big-box{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		.wrap{
+			position: absolute;
+			width: 1350px;
+			height: 800px;
+			opacity: 0.5;
+			background: #000;
+			top: 50%;
+			left: 50%;
+			margin-left: -675px;
+			margin-top: -400px;
+			z-index: 99;
+		}
+		.box{
+			position: absolute;
+			width: 400px;
+			height: 300px;
+			margin: 150px auto;
+			top: 50%;
+			left: 50%;
+			margin-left: -200px;
+			margin-top: -150px;
+			background-image: url('/images/bg1.jpg');
+			z-index: 999;
+		}
+		.user,.psw,.sub{
+			position: absolute;
+			width: 360px;
+			height: 40px;
+		/* 	background-color: red; */
+		}
+		.user{
+			top: 20%;
+			left: 50%;
+			margin-top: -10px;
+			margin-left: -180px;
+		}
+		.psw{
+			top: 50%;
+			left: 50%;
+			margin-top: -25px;
+			margin-left: -180px;
+		}
+		.sub{
+			top: 80%;
+			left: 50%;
+			margin-top: -40px;
+			margin-left: -180px;
+		}
+		.input-groups{
+			box-sizing: border-box;
+			width: 350px;
+			height: 40px;
+			border-radius: 15px;
+			margin-left: 5px;
+			background: rgba(0, 0, 0, 0);
+			border: 1px solid #fff;
+			color: #fff;
+		}
+		.input-user{padding-left: 60px;}
+		.input-psw{padding-left: 60px;}
+		.input-sub{
+			color: #817171;
+			font-size: 16px;
+			background: #fff;
+		}
+		.box span{
+			position: absolute;
+			top: 50%;
+			left: 30px;
+			margin-top: -7px;
+			color: #fff;
+		}

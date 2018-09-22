@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../public/stylesheets/main.css">
   </head>
   <body>
+    <div class="wrap"></div>
   	<div class="container">
       <div class="row">
         <div class="col-sm-3">
@@ -60,26 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="modal fade" id="myModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">请设置聊天昵称</h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon">昵称</div>
-                <input class="form-control" id="username" type="text" value="" onkeydown="javascript:keywordsName(event);">
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <input class="btn btn-primary" id="btn-setName" type="button" value="应用昵称">
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="modal fade" id="setMsgToOne" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -95,7 +77,22 @@
         </div>
       </div>
     </div>
-
+    
+    <div class="box">
+      <div class="user">
+        <span class="glyphicon glyphicon-user"></span>
+        <input class="input-groups input-user" id="username" type="text" value="" placeholder="用户名">
+      </div>
+      <div class="psw">
+        <span class="glyphicon glyphicon-lock"></span>
+        <input class="input-groups input-psw" type="text" id="password" value="" placeholder="用户密码">
+      </div>
+      <div class="sub">
+        <form>
+          <input class="input-groups input-sub" type="button" value="登&nbsp;&nbsp;录">
+        </form>
+      </div>
+  </div>
     <!--<script src="../public/javascripts/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="../public/javascripts/highlight.pack.js"></script>

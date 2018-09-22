@@ -11,12 +11,16 @@ var toOneId;
 hljs.initHighlightingOnLoad();
 
 $(function(){
+	$(".input-sub").click(function(){
+		$(".box").css("display","none");
+		$(".wrap").css("display","none");
+	})
 	//Modal Window,keyboard:当按下 escape 键时关闭模态框，设置为 false 时则按键无效。 
 	//backdrop:指定一个静态的背景，当用户点击模态框外部时不会关闭模态框。 
-	$('#myModal').modal({
-		backdrop: 'static',
-		// keyboard: false
-	});
+	// $('#myModal').modal({
+	// 	backdrop: 'static',
+	// 	// keyboard: false
+	// });
 	//login
 	$('#btn-setName').click(function(){
 		var name = $('#username').val();

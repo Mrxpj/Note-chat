@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title login
+    link(rel='stylesheet', href='http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+  body
+    .box
+      .user
+        span.glyphicon.glyphicon-user
+        input#username.input-groups.input-user(placeholder='用户名', type='text')
+      .psw
+        span.glyphicon.glyphicon-lock
+        input#password.input-groups.input-psw(placeholder='用户密码', type='text')
+      .sub
+        form(method='get' action='index')
+          input#btn-setName.input-groups.input-sub(value='登  录', type='submit')

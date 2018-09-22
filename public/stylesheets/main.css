@@ -2,6 +2,7 @@ li{
 	list-style-type: none;
 }
 body{
+	position: relative;
 	background:url(/images/bg.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
